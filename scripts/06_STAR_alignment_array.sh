@@ -21,7 +21,7 @@ echo $HOSTNAME
 GNM_DIR=/project/6001383/pip17/sars_cov_2/data/hg38_ref
 
 # Path to the trimmed reads
-FQ_DIR=/project/6001383/pip17/sars_cov_2/data/PRJEB43380/02_trimmed_reads
+FQ_DIR=/project/6001383/pip17/sars_cov_2/data/tools/salmon-1.9.0_linux_x86_64/bin
 
 # Directory for output files
 #BAM_DIR=/project/6001383/pip17/sars_cov_2/data/PRJEB43380/03_star_alignment
@@ -31,8 +31,8 @@ sampleinfo="sample.sheet.txt"
 
 # set variables to read the columns corresponding to sample names and r1 and r2
 SAMPLE=`sed -n "$SLURM_ARRAY_TASK_ID"p $sampleinfo |  awk '{print $1}'`
-r1=$FQ_DIR/"$SAMPLE"_trim_1.fq.gz
-r2=$FQ_DIR/"$SAMPLE"_trim_2.fq.gz
+r1="$SAMPLE"_trim_1.fq.gz
+r2="$SAMPLE"_trim_2.fq.gz
 
 # make output directory for results
 #mkdir salmon_output_dir
