@@ -8,4 +8,5 @@ Tools used in the scripts and workflow consists of the following: fastqc (Qualit
 (in progress) This folder also contains a containerized Snakemake pipeline to perform the abovementioned steps with paired-end read data in an automated and reproducible fashion. 
 
 Author: Shweta Pipaliya
+
 Date Updated: 30.11.2022
