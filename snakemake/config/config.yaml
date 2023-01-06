@@ -5,7 +5,6 @@ samples: config/samples.tsv
 # sample)
 units: config/units.tsv
 
-
 ref:
   # Ensembl species name
   species: homo_sapiens
