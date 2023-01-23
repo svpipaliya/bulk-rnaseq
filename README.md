@@ -7,6 +7,7 @@ Tools used are as following: fastqc (Quality Control), fastp (read-trimming), mu
 
 
 (in progress) This folder also contains a Snakemake pipeline to perform the abovementioned steps with paired-end read data. Below is a DAG of the rules used in the workflow.
+
 ![Screenshot 2023-01-23 at 17 31 11](https://user-images.githubusercontent.com/61172011/214095023-591e9fc1-dff0-4798-ac86-416f29dfc44c.png)
 
 
