@@ -1,4 +1,4 @@
-# bulk_transcriptomics
+# Bulk Transcriptomics for Human RNASeq Data
 This repo contains scripts and workflows for performing bulk transcriptomics analyses, specifically using samples originating from human tissue/cell culture. Workflow can be used for sequencing reads (paired or single-end) from Illumina HiSeq/MiSeq or BGI Genomics.  
 
 Briefly, the steps consist of  quality control to assess read contamination and base quality, adapter detection and trimming, read alignment against the human reference genome (build hg38/GRCh38), quality control of the aligned BAM files, sorting and indexing of BAM files, gene-level quantification, differential gene expression analyses, and DEG annotation and protein pathway analyses.
