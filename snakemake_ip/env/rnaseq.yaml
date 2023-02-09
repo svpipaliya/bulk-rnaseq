@@ -1,0 +1,15 @@
+name: rnaseq
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - pandas = 0.23
+  - star=2.7.0
+  - fastp=0.20.1-0
+  - subread=2.0.1-0
+  - multiqc=1.9-0
+  - yaml = 0.2.5
+  - fastqc =0.11.9=0
+  - samtools=1.3.1
+  - snakemake=5.2.2  
