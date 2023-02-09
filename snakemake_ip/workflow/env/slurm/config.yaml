@@ -1,0 +1,13 @@
+jobs: 100
+cluster: >-
+    sbatch
+    --ntasks 1
+    --cpus-per-task {resources.threads}
+    --mem {resources.mem_mb}
+    --time {resources.runtime}
+    --output /work/gr-fe/pipaliya/transcriptomics/snakemake/log/jobs/{rule}_{wildcards}_%j.out
+    --error /work/gr-fe/pipaliya/transcriptomics/snakemake/log/jobs/{rule}_{wildcards}_%j.err
+#default-resources:
+   # - threads=1
+    #- mem_mb=3850
+   # - time="1:00:00"
