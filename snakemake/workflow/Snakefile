@@ -1,7 +1,6 @@
 ## Author: Shweta Pipaliya ##
 ## Date: 09.01.2023 ##
-## Snakefile to run RNASEQ workflow ##
-## This workflow performs all the steps up to read/transcript counting step ##
+## Snakefile to run the RNASEQ workflow ##
 ## for a dry-run use: snakemake --dryrun ##
 ## to generate a DAG of the steps use: snakemake --dag ##
 
