@@ -10,7 +10,7 @@ This repository consists of a Snakemake pipeline to perform the abovementioned s
 
 ![Screenshot 2023-01-23 at 17 31 11](https://user-images.githubusercontent.com/61172011/214095023-591e9fc1-dff0-4798-ac86-416f29dfc44c.png)
 
-This repository is still in progress. Further README will be added to clone and run the snakemake workflow.
+Currently, this repository is still in progress and will be updated frequently. Additional README section will be added to run the snakemake workflow in HPC environment using Conda.
 
 Author: Shweta Pipaliya
 
