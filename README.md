@@ -15,7 +15,9 @@ Tools and dependencies:
  -   salmon=1.4.0
  -   tximport
  -   DESEQ2
- -   Clusterprofiler/GSEA/Gene Ontology
+ -   Clusterprofiler
+ -   GSEA
+ -   Gene Ontology
  -   STRINGDB
 
 The Snakemake workflow is still under progress and contents will be modified frequently. Below is a DAG of the rules used in the workflow.
