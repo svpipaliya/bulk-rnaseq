@@ -24,4 +24,4 @@ An additional README section will be added to run the snakemake workflow in an s
 
 Author: Shweta Pipaliya
 
-Date Updated: 23.2.2023
+Date Updated: 13.2.2023
