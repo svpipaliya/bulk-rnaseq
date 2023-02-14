@@ -13,3 +13,10 @@ To perform normalization of the raw counts, differential gene expression analysi
 ## Input
 - Paired-end reads or single-end reads. In case of paired data, both forward (`fq_1`) and reverse (`fq_2`) should be present in the `workflow/input` folder. Alternatevly a .TSV file containing sample IDs and paths to reads can be provided (under development).
 - Genome or transcriptome reference in FASTA format must be provided in the `workflow/resources` folder. For example, the UCSC human reference genome build 38 can be downloaded using `wget` from [NCBI FTP](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_full_analysis_set.fna.gz) Corrosponding gene annotations for this reference can also be downloaded in the [GTF format](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_full_analysis_set.refseq_annotation.gtf.gz). Transcriptome from the same build can be also be downloaded from the latest [Hg38 Refseq FTP](https://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh38_latest/refseq_identifiers/GRCh38_latest_rna.fna.gz).
+
+## Output
+- From the Rule 1 Fastqc run, an `.html` and a `gz` compressed `.fastq.gz` summary files should be produced detailing sequencing quality report
+- Rule 2 Fastp will produced forward and reverse `.trim_1.fastq.gz` and `.trim_2.fastq.gz` post-contamination and adapter-removed trimmed reads
+- Indexing of genome using STAR will generate `SA`, `SAindex`. and several `.tab` files. IMPORTANT: Index should match build of the reference genome fasta. If Salmon is used `.bin` files should be produced.
+- STAR and Salmon alignment step will generate `.bam` for read counting. In case of STAR, sorting `samtools` will be used to generate final `.bam` that are `SortedbyCoordinate`
+- Featurecounts will generate an aggregated count matrix '{project_id}__counts.txt_`
