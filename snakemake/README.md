@@ -21,4 +21,7 @@ To perform normalization of the raw counts, differential gene expression analysi
 - STAR and Salmon alignment step will generate `.bam` for read counting. In case of STAR, sorting `samtools` will be used to generate final `.bam` that are `SortedbyCoordinate`
 - Featurecounts will generate an aggregated count matrix `{project_id}_counts.txt`. If Salmon is used for transcript-level quantification, a sample-level `quant.sf` will be generated. These can be aggregated into a single matrix using `scripts/salmon_quant_concat.sh`
 
+## Before Proceeding
+The use of this pipeline requires basic knowledge in Unix Shell and R programming languages for command line execution and manipulation of DGE scripts consisting of bioconductor packages for DGE analysis. Foundational [bash](https://swcarpentry.github.io/shell-novice/) and [R](https://datacarpentry.org/genomics-r-intro/) programming can be found through Software Carpentery Foundation and Data Carpentery.
+User should also be familiar with high performance computing job submission and SLURM workload manager. Refer to the [SLURM documentation](https://slurm.schedmd.com/documentation.html) to get started or contact your local institutional IT adminstrator for guidance.  
 
