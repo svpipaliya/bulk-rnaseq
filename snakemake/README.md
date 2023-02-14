@@ -19,4 +19,4 @@ To perform normalization of the raw counts, differential gene expression analysi
 - Rule 2 Fastp will produced forward and reverse `.trim_1.fastq.gz` and `.trim_2.fastq.gz` post-contamination and adapter-removed trimmed reads
 - Indexing of genome using STAR will generate `SA`, `SAindex`. and several `.tab` files. IMPORTANT: Index should match build of the reference genome fasta. If Salmon is used `.bin` files should be produced.
 - STAR and Salmon alignment step will generate `.bam` for read counting. In case of STAR, sorting `samtools` will be used to generate final `.bam` that are `SortedbyCoordinate`
-- Featurecounts will generate an aggregated count matrix '{project_id}__counts.txt_`
+- Featurecounts will generate an aggregated count matrix `{project_id}_counts.txt`. If Salmon is used for transcript-level quantification, a sample-level `quant.sf` will be generated. These can be aggregated into a single matrix using `scripts/salmon_quant_concat.sh`
