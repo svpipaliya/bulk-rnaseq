@@ -25,9 +25,18 @@ To perform normalization of the raw counts, differential gene expression analysi
 The use of this pipeline requires basic knowledge in Unix Shell and R programming languages for command line execution and manipulation of DGE scripts consisting of bioconductor packages for DGE analysis. Foundational [bash](https://swcarpentry.github.io/shell-novice/) and [R](https://datacarpentry.org/genomics-r-intro/) programming can be studied through Software Carpentery Foundation and Data Carpentery.
 User should also be familiar with high performance computing job submission and SLURM workload manager. Refer to the [SLURM documentation](https://slurm.schedmd.com/documentation.html) to get started or contact your local institutional IT adminstrator for guidance.  
 
-## Installation on HPC (SLURM)
+## Installation on HPC (SLURM) :battery:
 - Requires `conda` to be installed in your home directory. Suggested Miniconda build for running this workflow: [Miniconda3-latest-Linux-x86_64.sh](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) 
   -   On your login node run `bash Miniconda3-latest-Linux-x86_64.sh`
  - Once conda has been installed, clone this repository into your `/scratch` or `/work` directory using `git clone https://github.com/svpipaliya/bulk-transcriptomics.git`
    -  Navigate to the `snakemake` directory and generate a new RNASEQ conda environment using `env/rnaseq.yaml`
-   -  The specific command to install is `conda env create -f env/rnaseq.yaml`. Alternatively, you can use `mamba` in case there are freezes in during conda solves.
+   -  The specific command to install is `conda env create --name rnaseq -f env/rnaseq.yaml`. Alternatively, you can use `mamba` in case there are freezes in during conda solves.
+   -  Activate your environment using `source activate rnaseq` or `conda activate rnaseq`
+
+## Dry-run and DAG :world_map:
+- Once all the inputs are placed in the appropriate folder, you can run a dry-run of the steps to ensure the workflow setup is correct
+-   To run a dry-run and generting a diacyclic graph of all of the rules, use the following parameter:  `snakemake --dryrun` and `snakemake --rulegraph | dot -tpdf > dag.pdf`
+
+## Cluster submission of the real run :white_check_mark:
+IP
+
