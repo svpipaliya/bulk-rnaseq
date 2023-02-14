@@ -26,5 +26,8 @@ The use of this pipeline requires basic knowledge in Unix Shell and R programmin
 User should also be familiar with high performance computing job submission and SLURM workload manager. Refer to the [SLURM documentation](https://slurm.schedmd.com/documentation.html) to get started or contact your local institutional IT adminstrator for guidance.  
 
 ## Installation and Use on HPC (SLURM)
-- Requires `conda` to be installed on your profile. Suggested Miniconda build for running this workflow: [Miniconda3-latest-Linux-x86_64.sh](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) 
+- Requires `conda` to be installed in your home directory. Suggested Miniconda build for running this workflow: [Miniconda3-latest-Linux-x86_64.sh](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) 
   -   On your login node run `bash Miniconda3-latest-Linux-x86_64.sh`
+ - Once conda has been installed, clone this repository into your `/scratch` or `/work` directory
+ -  generate a new RNASEQ conda environment using `env/rnaseq.yaml`
+ -  The specific command to install can be `conda env create -f env/rnaseq.yaml`
