@@ -4,13 +4,23 @@
 ## for a dry-run use: snakemake --dryrun ##
 ## to generate a DAG of the steps use: snakemake --dag ##
 
-##### libraries for data processing #####
+##### Libraries for data processing #####
 import os
 import glob
 import pandas as pd
+import sys
 
-##### read in input consisting of accession and fw/rv read wildcards #####
+##### Read in input consisting of accession and fw/rv read wildcards #####
 fibro,FRR = glob_wildcards("../input/rawReads/{fibro}_{frr}.fastq.gz")
+
+#### Create output directories #####
+try:
+	dirs = ['trimmedReads', 'starAligned', 'multiQC', 'salmonIndex',
+			'salmonAligned', 'samsort', 'featureCounts', 'salmonQuant']		
+	for items in dirs:
+		os.mkdir(items)
+except FileExistsError:
+	pass
 
 ##### Load RNASeq Rules #####
 include: "rules/1.index.smk"
@@ -22,7 +32,7 @@ include: "rules/5.counts.smk"
 #### Target Rules #####
 rule all: 
 	input: 
-		expand("rawQC/{fibro}_{frr}_fastqc.{extension}", fibro=fibro, frr=FRR, extension=["gz","html"]),
+		expand("rawQC/{fibro}_{frr}_fastqc.{extension}", fibro=fibro, frr=FRR, extension=["zip","html"]),
 		directory("../resources/salmon_hg38_index"),
 		directory("../resources/star_genome"),
 		"../output/bamQC/multiqc_star_report.html",
