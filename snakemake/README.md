@@ -31,12 +31,15 @@ User should also be familiar with high performance computing job submission and 
   ```
   bash Miniconda3-latest-Linux-x86_64.sh
   ```
- - Once conda has been installed, clone this repository into your `/scratch` or `/work` directory using `git clone https://github.com/svpipaliya/bulk-transcriptomics.git`
+ - Once conda is installed, clone this repository into your `/scratch` or `/work` directory using:
+  ```
+  git clone https://github.com/svpipaliya/bulk-transcriptomics.git
+  ```
    -  Navigate to the `snakemake` directory and generate a new RNASEQ conda environment using `env/rnaseq.yaml`
    -  The specific command to install is: 
    ```
    conda env create --name rnaseq -f env/rnaseq.yaml
-   ```. 
+   ```
    - Alternatively, you can use `mamba` in case there are freezes during conda solves.
    -  Activate your environment using:
    ```
