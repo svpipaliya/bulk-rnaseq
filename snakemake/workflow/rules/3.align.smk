@@ -7,8 +7,10 @@ rule starAlign:
 	output:
 		bam="../output/starAligned/{fibro}.Aligned.sortedbyCoord.out.bam",
 		log="../output/starAligned/{fibro}.Log.final.out"
+	log:
+		"../log/starAligned/{fibro}.log"
 	params: 
-		prefix="starAligned/{fibro}"
+		prefix="../output/starAligned/{fibro}"
 	resources: 
 		threads=1, 
 		runtime=4320, 
@@ -20,7 +22,7 @@ rule starAlign:
 		--readFilesCommand zcat --sjdbGTFfile {input.annotation} \
 		--outFileNamePrefix {params.prefix} --outSAMtype BAM SortedByCoordinate \
 		--limitBAMsortRAM 16000000000 \
-		--outReadsUnmapped Within --outSAMattributes Standard 
+		--outReadsUnmapped Within --outSAMattributes Standard > {output.bam} {output.log} {log}
 		"""
 
 # this rule is only applicable if you want to generate alignments using Salmon
