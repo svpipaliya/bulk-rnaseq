@@ -1,5 +1,5 @@
 # Description
-This page contains instructions for running this Snakemake workflow on your Slurm High Performance Computing Cluster. The pipeline is used to process single or paired-end reads and generates a raw gene and transcript-level count matrix that can be used for differential gene expression analysis (implementation of differential gene expression and enrichment analysis steps are currently underway). Additional outputs include trimmed fastq files, `.bam` . 
+This page contains instructions for running this Snakemake workflow on your Slurm High Performance Computing Cluster. The pipeline is used to process single or paired-end reads and generates a raw gene and transcript-level count matrix that can be used for differential gene expression analysis (implementation of differential gene expression and enrichment analysis steps are currently underway). Additional outputs include trimmed fastq files, `.bam`, qc'd reports, and a count matrix. 
 Currently the pipeline is best-suited for Illumina sequencing data. However, read-processing steps can be modified by the user by providing own adapter sequences. 
 
 ## Pipeline overview :label:
@@ -30,7 +30,7 @@ User should also be familiar with high performance computing job submission and 
   -   On your login node run ```bash Miniconda3-latest-Linux-x86_64.sh```
  - Once conda has been installed, clone this repository into your `/scratch` or `/work` directory using `git clone https://github.com/svpipaliya/bulk-transcriptomics.git`
    -  Navigate to the `snakemake` directory and generate a new RNASEQ conda environment using `env/rnaseq.yaml`
-   -  The specific command to install is: ```conda env create --name rnaseq -f env/rnaseq.yaml```. Alternatively, you can use `mamba` in case there are freezes in during conda solves.
+   -  The specific command to install is: ```conda env create --name rnaseq -f env/rnaseq.yaml```. Alternatively, you can use `mamba` in case there are freezes during conda solves.
    -  Activate your environment using ```source activate rnaseq``` or ```conda activate rnaseq```
 
 ## Dry-run and DAG :world_map:
