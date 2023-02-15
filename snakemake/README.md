@@ -27,11 +27,11 @@ User should also be familiar with high performance computing job submission and 
 
 ## Installation on HPC (SLURM) :battery:
 - Requires `conda` to be installed in your home directory. Suggested Miniconda build for running this workflow: [Miniconda3-latest-Linux-x86_64.sh](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) 
-  -   On your login node run `bash Miniconda3-latest-Linux-x86_64.sh`
+  -   On your login node run ```bash Miniconda3-latest-Linux-x86_64.sh```
  - Once conda has been installed, clone this repository into your `/scratch` or `/work` directory using `git clone https://github.com/svpipaliya/bulk-transcriptomics.git`
    -  Navigate to the `snakemake` directory and generate a new RNASEQ conda environment using `env/rnaseq.yaml`
-   -  The specific command to install is `conda env create --name rnaseq -f env/rnaseq.yaml`. Alternatively, you can use `mamba` in case there are freezes in during conda solves.
-   -  Activate your environment using `source activate rnaseq` or `conda activate rnaseq`
+   -  The specific command to install is: ```conda env create --name rnaseq -f env/rnaseq.yaml```. Alternatively, you can use `mamba` in case there are freezes in during conda solves.
+   -  Activate your environment using ```source activate rnaseq``` or ```conda activate rnaseq```
 
 ## Dry-run and DAG :world_map:
 - Once all the inputs are placed in the appropriate folder, you can run a dry-run of the steps to ensure the workflow setup is correct
