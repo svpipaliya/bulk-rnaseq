@@ -22,13 +22,6 @@ try:
 except FileExistsError:
 	pass
 
-##### Load RNASeq Rules #####
-include: "rules/1.index.smk"
-include: "rules/2.trim.smk"
-include: "rules/3.align.smk"
-include: "rules/4.alignqc.smk"
-include: "rules/5.counts.smk"
-
 #### Target Rules #####
 rule all: 
 	input: 
@@ -38,5 +31,11 @@ rule all:
 		"../output/bamQC/multiqc_star_report.html",
 		"../output/featureCounts/hgid_feature_counts.txt", 
 		#expand("../output/salmonQuant/{fibro}_quant.sf", fibro=fibro)
+##### Load RNASeq Rules #####
+include: "rules/1.index.smk"
+include: "rules/2.trim.smk"
+include: "rules/3.align.smk"
+include: "rules/4.alignqc.smk"
+include: "rules/5.counts.smk"
 
-### End - Run normalisation and DGE steps using the DESEQ2 Rscript seperately ###
+#### End of Snakemake Run - Perform count normalisation and differential gene expression steps using the DESEQ2 Rscript seperately #####
