@@ -1,4 +1,3 @@
-# generate reports of the final qc'd file
 rule multiqc:
 	input:
 		bam=expand("../output/starAligned/{fibro}.Aligned.sortedbyCoord.out.bam", fibro=fibro)
