@@ -33,10 +33,15 @@ rule all:
 		#expand("../output/salmonQuant/{fibro}_quant.sf", fibro=fibro)
 		
 ##### Load RNASeq Rules #####
-include: "rules/1.index.smk"
-include: "rules/2.trim.smk"
-include: "rules/3.align.smk"
-include: "rules/4.alignqc.smk"
-include: "rules/5.counts.smk"
+include: "rules/starIndex.smk"
+include: "rules/salmonIndex.smk"
+include: "rules/fastQC.smk"	
+include: "rules/trim.smk"
+include: "rules/starAlign.smk"
+include: "rules/salmonAlign.smk"	
+include: "rules/alignqc.smk"
+include: "rules/bamsort.smk"
+include: "rules/featureCounts.smk"
+include: "rules/salmonQuant.smk"
 
 #### End of Snakemake Run - Perform count normalisation and differential gene expression steps using the DESEQ2 Rscript seperately #####
