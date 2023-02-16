@@ -26,8 +26,8 @@ The use of this pipeline requires basic knowledge in Unix Shell and R programmin
 User should also be familiar with high performance computing job submission and SLURM workload manager. Refer to the [SLURM documentation](https://slurm.schedmd.com/documentation.html) to get started or contact your local institutional IT adminstrator for guidance.  
 
 ## Installation on HPC (SLURM) :battery:
-- Requires `conda` to be installed in your home directory. Suggested Miniconda build for running this workflow: [Miniconda3-latest-Linux-x86_64.sh](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) 
-  -   On your login node run 
+- Requires `conda` to be installed in your home directory. Suggested Miniconda build for running this workflow: `wget` [Miniconda3-latest-Linux-x86_64.sh](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) 
+  -   After download, on the login node run 
   ```
   bash Miniconda3-latest-Linux-x86_64.sh
   ```
