@@ -13,7 +13,9 @@ import sys
 ##### Read in input consisting of accession and fw/rv read wildcards #####
 fibro,FRR = glob_wildcards("../input/rawReads/{fibro}_{frr}.fastq.gz")
 
-#### Create output directories #####
+##### Add code here to read .tsv/csv containing sample info + metadata using pd #####
+
+##### Create output directories ######
 try:
 	dirs = ['trimmedReads', 'starAligned', 'multiQC', 'salmonIndex',
 			'salmonAligned', 'samsort', 'featureCounts', 'salmonQuant']		
@@ -22,7 +24,7 @@ try:
 except FileExistsError:
 	pass
 
-#### Target Rules #####
+##### Target Rules ######
 rule all: 
 	input: 
 		expand("rawQC/{fibro}_{frr}_fastqc.{extension}", fibro=fibro, frr=FRR, extension=["zip","html"]),
@@ -45,4 +47,4 @@ include: "rules/bamsort.smk"
 include: "rules/featureCounts.smk"
 #include: "rules/salmonQuant.smk"
 
-#### End of Snakemake Run - Perform count normalisation and differential gene expression steps using the DESEQ2 Rscript seperately #####
+##### End of Snakemake Run - Perform count normalisation and differential gene expression steps using the DESEQ2 Rscript seperately ######
