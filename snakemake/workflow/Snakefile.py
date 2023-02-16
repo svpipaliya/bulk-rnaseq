@@ -31,6 +31,7 @@ rule all:
 		"../output/bamQC/multiqc_star_report.html",
 		"../output/featureCounts/hgid_feature_counts.txt", 
 		#expand("../output/salmonQuant/{fibro}_quant.sf", fibro=fibro)
+		
 ##### Load RNASeq Rules #####
 include: "rules/1.index.smk"
 include: "rules/2.trim.smk"
