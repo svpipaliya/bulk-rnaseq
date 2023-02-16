@@ -1,4 +1,4 @@
-jobs: 100
+jobs: 40 ## tells SLURM to run no more than 100 jobs at a time
 cluster: >-
     sbatch
     --ntasks 1
@@ -7,7 +7,7 @@ cluster: >-
     --time {resources.runtime}
     --output /work/gr-fe/pipaliya/transcriptomics/snakemake/workflow/output/log/jobs/{rule}_{wildcards}_%j.out
     --error /work/gr-fe/pipaliya/transcriptomics/snakemake/worflow/output/log/jobs/{rule}_{wildcards}_%j.err
-#default-resources:
+#default-resources: 
    # - threads=1
     #- mem_mb=3850
    # - time="1:00:00"
