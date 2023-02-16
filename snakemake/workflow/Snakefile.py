@@ -26,7 +26,8 @@ except FileExistsError:
 rule all: 
 	input: 
 		expand("rawQC/{fibro}_{frr}_fastqc.{extension}", fibro=fibro, frr=FRR, extension=["zip","html"]),
-		directory("../resources/salmon_hg38_index"),
+		directory("../resources/star2.7_hg38_index"),
+		#directory("../resources/salmon_hg38_index"),
 		directory("../resources/star_genome"),
 		"../output/bamQC/multiqc_star_report.html",
 		"../output/featureCounts/hgid_feature_counts.txt", 
@@ -34,14 +35,14 @@ rule all:
 		
 ##### Load RNASeq Rules #####
 include: "rules/starIndex.smk"
-include: "rules/salmonIndex.smk"
+#include: "rules/salmonIndex.smk"
 include: "rules/fastQC.smk"	
 include: "rules/trim.smk"
 include: "rules/starAlign.smk"
-include: "rules/salmonAlign.smk"	
+#include: "rules/salmonAlign.smk"	
 include: "rules/alignqc.smk"
 include: "rules/bamsort.smk"
 include: "rules/featureCounts.smk"
-include: "rules/salmonQuant.smk"
+#include: "rules/salmonQuant.smk"
 
 #### End of Snakemake Run - Perform count normalisation and differential gene expression steps using the DESEQ2 Rscript seperately #####
