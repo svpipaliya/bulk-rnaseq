@@ -1,4 +1,4 @@
-jobs: 40 ## tells SLURM to run no more than 100 jobs at a time
+jobs: 40 ## tells SLURM not to submit more than 40 serial jobs at a time
 cluster: >-
     sbatch
     --ntasks 1
