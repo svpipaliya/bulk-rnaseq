@@ -1,10 +1,10 @@
 rule salmonAlign:
 	input:
-		read1=expand("../output/trimmedReads/{fibro}_trim_1.fastq.gz",fibro=fibro),
-		read2=expand("../output/trimmedReads/{fibro}_trim_2.fastq.gz",fibro=fibro),
+		read1=expand("../trimmedReads/{fibro}_trim_1.fastq.gz",fibro=fibro),
+		read2=expand("../trimmedReads/{fibro}_trim_2.fastq.gz",fibro=fibro),
 		index="salmonIndex/salmon_hg38_index"
 	output:
-		salmonAligned=expand("../output/salmonAligned/{fibro}.Salmon.Aligned.bam", fibro = fibro)
+		salmonAligned=expand("../salmonAligned/{fibro}.Salmon.Aligned.bam", fibro = fibro)
 	resources: 
 		threads=5,
 		runtime=4320, 
