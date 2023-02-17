@@ -1,0 +1,11 @@
+sample	forward	reverse		
+fibro1	../datasets/pasteur/fibro1_1.fastq.gz	../datasets/pasteur/fibro1_2.fastq.gz		
+fibro2	../datasets/pasteur/fibro2_1.fastq.gz	../datasets/pasteur/fibro2_2.fastq.gz		
+fibro3	../datasets/pasteur/fibro3_1.fastq.gz	../datasets/pasteur/fibro3_2.fastq.gz		
+fibro4	../datasets/pasteur/fibro4_1.fastq.gz	../datasets/pasteur/fibro4_2.fastq.gz		
+fibro5	../datasets/pasteur/fibro5_1.fastq.gz	../datasets/pasteur/fibro5_2.fastq.gz		
+fibro6	../datasets/pasteur/fibro6_1.fastq.gz	../datasets/pasteur/fibro6_2.fastq.gz		
+fibro7	../datasets/pasteur/fibro7_1.fastq.gz	../datasets/pasteur/fibro7_2.fastq.gz		
+fibro8	../datasets/pasteur/fibro8_1.fastq.gz	../datasets/pasteur/fibro8_2.fastq.gz		
+fibro9	../datasets/pasteur/fibro9_1.fastq.gz	../datasets/pasteur/fibro9_2.fastq.gz		
+fibro10	../datasets/pasteur/fibro10_1.fastq.gz	../datasets/pasteur/fibro10_2.fastq.gz		
