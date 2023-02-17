@@ -2,7 +2,7 @@ rule starAlign:
 	input:
 		read1="../trimmedReads/{fibro}_trim_1.fastq.gz",
 		read2="../trimmedReads/{fibro}_trim_2.fastq.gz",
-		ref="hg38/",
+		ref="../resources/hg38/",
 		annotation="../resources/hg38/GCA_000001405.15_GRCh38_full_analysis_set.refseq_annotation.gtf"
 	output:
 		bam="../starAligned/{fibro}.Aligned.sortedbyCoord.out.bam",
