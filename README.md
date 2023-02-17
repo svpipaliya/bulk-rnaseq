@@ -27,7 +27,7 @@ The Snakemake workflow is still under progress and contents will be modified fre
 
 ![Screenshot 2023-01-23 at 17 31 11](https://user-images.githubusercontent.com/61172011/214095023-591e9fc1-dff0-4798-ac86-416f29dfc44c.png)
 
-An additional [README](https://github.com/svpipaliya/bulk-rnaseq/tree/main/snakemake) section is available to run the snakemake workflow in an slurm HPC environment as well as instructions on set up using Conda/Mamba.
+An additional [README](https://github.com/svpipaliya/bulk-rnaseq/tree/main/snakemake) is available on how to specifically run the snakemake workflow in a slurm HPC environment. Instructions on workflow installation and setup using Conda/Mamba are also detailed. 
 
 Author: Shweta Pipaliya
 
