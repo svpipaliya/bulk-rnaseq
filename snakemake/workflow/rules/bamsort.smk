@@ -2,7 +2,7 @@ rule bamsort:
 	input:
 		bam=rules.starAlign.output.bam
 	output:
-		"../output/samsort/{fibro}.Aligned.sortedByName.out.bam"
+		"../samsort/{fibro}.Aligned.sortedByName.out.bam"
 	resources:
 		threads=8,
 		runtime=1440,
