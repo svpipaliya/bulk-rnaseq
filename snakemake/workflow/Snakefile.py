@@ -14,6 +14,9 @@ import sys
 fibro,FRR = glob_wildcards("../input/rawReads/{fibro}_{frr}.fastq.gz")
 
 ##### Add code here to read .tsv/csv containing sample info + metadata using pd #####
+units = pd.read_table(
+
+
 
 ##### Create output directories ######
 try:
