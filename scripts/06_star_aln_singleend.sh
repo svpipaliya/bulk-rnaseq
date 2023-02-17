@@ -9,7 +9,7 @@
 #SBATCH --output=STAR_alignment_SRR14240795_out
 
 # load all modules for runnning the STAR v.2.7 aligner
-module load 
+module load gcc
 module load star/2.7.9a
 
 # parameter specification for running STAR
