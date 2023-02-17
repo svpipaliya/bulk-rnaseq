@@ -68,6 +68,6 @@ snakemake --rulegraph | dot -tpdf > dag.pdf
 
 ## Acknowledgements 👏
 - [Snakemake Documentation](https://snakemake.readthedocs.io/en/stable/)
-- [BleekerLab Snakemake Workflow](https://github.com/BleekerLab/snakemake_rnaseq#directed-acyclic-graph-of-jobs)
+- [Snakemake RNA-seq workflow](https://github.com/snakemake-workflows/rna-seq-star-deseq2)
 - [University of Zurich Snakemake Setup on Cluster](https://docs.s3it.uzh.ch/how-to_articles/how_to_run_snakemake/)
 - [Fellay Lab](https://fellay-lab.epfl.ch/)
