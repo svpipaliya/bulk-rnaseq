@@ -2,7 +2,7 @@
 This page contains instructions for running this Snakemake workflow on your Slurm High Performance Computing Cluster. The pipeline is used to process single or paired-end reads and generates a raw gene and transcript-level count matrix that can be used for differential gene expression analysis (implementation of differential gene expression and enrichment analysis steps are currently underway). Additional outputs include trimmed fastq files, `.bam` alignments, quality control reports, and a count matrix. 
 Currently the pipeline is best-suited for Illumina sequencing data. However, read-processing steps can be modified by the user by providing own adapter sequences. 
 
-The user should in general also be familiar with bulk RNA-Seq analysis workflow and assess whether modifications must be made according to their experimental design and research question. For excellent starter tutorials, please visit [Harvard Chan Bioinformatics Core's](https://github.com/hbctraining) teaching materials on this topic. 
+The user should in general also be familiar with bulk RNA-Seq analysis workflow and assess whether modifications must be made according to their experimental design and research question. For excellent starter tutorials, please visit [Harvard Chan Bioinformatics Core's](https://github.com/hbctraining) teaching modules on this topic. 
 
 ## Pipeline overview :label:
 1. Raw fastq files (.gz compressed or uncompressed) will be checked for quality using `fastqc`.
