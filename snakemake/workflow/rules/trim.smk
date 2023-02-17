@@ -5,9 +5,9 @@ rule fastp:
 		read1="../input/rawReads/{fibro}_1.fastq.gz",
 		read2="../input/rawReads/{fibro}_2.fastq.gz"
 	output:
-		read1T="../output/trimmedReads/{fibro}_trim_1.fastq.gz",
-		read2T="../output/trimmedReads/{fibro}_trim_2.fastq.gz",
-		html="../output/trimmedReads/{fibro}_fastq.html"
+		read1T="../trimmedReads/{fibro}_trim_1.fastq.gz",
+		read2T="../trimmedReads/{fibro}_trim_2.fastq.gz",
+		html="../trimmedReads/{fibro}_fastq.html"
 	resources: 
 		threads=4,
 		runtime=2880, 
