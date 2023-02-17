@@ -63,6 +63,6 @@ snakemake --rulegraph | dot -tpdf > dag.pdf
 
 ## Cluster submission of the real run :white_check_mark:
 - Once you are ready to run the workflow on the cluster, make sure the `config.yaml` in the /env/slurm/ is present in your snakemake worflow folder. This will be used by the  `hpc_submit.sh` submission script to read the slurm parameters that specify resources from each rule
-  - :warning: Create a log directory `mkdir logs` where the slurm error and output files will be sent.
-   - If this is not present, serial job submission will not occur and the main batch submission script will be run indefinetly (or well atleast until the max-time specified in the script).
+- :warning: Create a log directory `mkdir logs` where the slurm error and output files will be sent.
+   - If this is not present, serial jobs will not be submitted and the main batch submission script will be run indefinetly (or well atleast until the max-time specified).
 
