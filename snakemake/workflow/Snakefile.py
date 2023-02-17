@@ -17,7 +17,7 @@ fibro,FRR = glob_wildcards("../input/rawReads/{fibro}_{frr}.fastq.gz")
 
 ##### Create output directories ######
 try:
-	dirs = ['trimmedReads', 'starAligned', 'multiQC', 'salmonIndex',
+	dirs = ['trimmedReads', 'rawQC', 'starAligned', 'multiQC', 'salmonIndex',
 			'salmonAligned', 'samsort', 'featureCounts', 'salmonQuant']		
 	for items in dirs:
 		os.mkdir(items)
