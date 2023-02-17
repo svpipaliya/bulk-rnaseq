@@ -3,7 +3,7 @@ rule salmonQuant:
 		bam=expand("../salmonAligned/{fibro}.Salmon.Aligned.bam", fibro = fibro),
 		ref="../resources/hg38/hg38_transcriptome.fa"
 	output:
-		salmonQuant=expand("../output/salmonQuant/{fibro}_quant.sf", fibro=fibro)
+		salmonQuant=expand("../salmonQuant/{fibro}_quant.sf", fibro=fibro)
 	resources:
 		threads=5,
 		runtime=4320, 
