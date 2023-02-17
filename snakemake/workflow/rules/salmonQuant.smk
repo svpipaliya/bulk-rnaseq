@@ -1,6 +1,6 @@
 rule salmonQuant:
 	input:
-		bam=expand("../output/salmonAligned/{fibro}.Salmon.Aligned.bam", fibro = fibro),
+		bam=expand("../salmonAligned/{fibro}.Salmon.Aligned.bam", fibro = fibro),
 		ref="../resources/hg38/hg38_transcriptome.fa"
 	output:
 		salmonQuant=expand("../output/salmonQuant/{fibro}_quant.sf", fibro=fibro)
