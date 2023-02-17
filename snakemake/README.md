@@ -66,7 +66,7 @@ snakemake --rulegraph | dot -tpdf > dag.pdf
 - :warning: Before job submission, do not forget to create a log directory (`mkdir logs`) where the slurm error and output files will be sent.
    - If this folder is not present, serial jobs won't be submitted to the cluster and the main batch script will run indefinetly (well atleast until the max-time specified) without any output/error from the rules.
 
-## References and Acknowledgement
+## Acknowledgements 👏
 - [Snakemake Documentation](https://snakemake.readthedocs.io/en/stable/)
 - [BleekerLab Snakemake Workflow](https://github.com/BleekerLab/snakemake_rnaseq#directed-acyclic-graph-of-jobs)
 - [University of Zurich Snakemake Setup on Cluster](https://docs.s3it.uzh.ch/how-to_articles/how_to_run_snakemake/)
