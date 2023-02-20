@@ -21,7 +21,7 @@ The user should in general also be familiar with bulk RNA-Seq analysis workflow 
 - From the Rule 1 Fastqc run, an `.html` and a `gz` compressed `.fastq.gz` summary files should be produced detailing sequencing quality report
 - Rule 2 Fastp will produced forward and reverse `.trim_1.fastq.gz` and `.trim_2.fastq.gz` post-contamination and adapter-removed trimmed reads
 - Indexing of genome using STAR will generate `SA`, `SAindex`. and several `.tab` files. ⚠️: Index should match build of the reference genome fasta. If Salmon is used `.bin` files should be produced.
-- STAR and Salmon alignment step will generate `.bam` for read counting. In case of STAR, sorting function from `samtools` will be used to take in STAR `SortedbyCoordinate.bam` output to generate final that are `SortedbyName`. This is necessary for gene-level counting. See [explanation](https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/05_counting_reads.html) for why this step is necessary.
+- STAR and Salmon alignment step will generate `.bam` for read counting. In case of STAR, sorting function from `samtools` will be used to take in STAR `SortedbyCoordinate.bam` output to generate final that are `SortedbyName`. This is necessary for gene-level counting. See [explanation](https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/05_counting_reads.html) for why this step is necessary when working with paired-end data.
 - Featurecounts will generate an aggregated count matrix `{project_id}_counts.txt`. If Salmon is used for transcript-level quantification, a sample-level `quant.sf` will be generated. These can be aggregated into a single matrix using `scripts/salmon_quant_concat.sh`
 
 ## Before Proceeding :raised_hand:
