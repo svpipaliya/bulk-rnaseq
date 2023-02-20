@@ -11,7 +11,7 @@ import pandas as pd
 import sys
 
 ##### Read in input consisting of accession and fw/rv read wildcards #####
-fibro,FRR = glob_wildcards("../input/rawReads/{fibro}_{frr}.fastq.gz")
+fibro,FRR = glob_wildcards("./input/rawReads/{fibro}_{frr}.fastq.gz")
 
 ##### Add code here to read .tsv/csv containing sample info + metadata using pd #####
 
