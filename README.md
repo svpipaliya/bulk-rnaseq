@@ -4,7 +4,7 @@ This repo contains bash scripts and a snakemake workflow for performing bulk tra
  - Briefly, the steps consist of  quality control to assess read contamination and base quality, adapter detection and trimming (Illumina only; please provide adapter sequences in-case using another technology), read alignment against the human reference genome/transcriptome (build hg38/GRCh38), quality control of the aligned BAM files, sorting and indexing of BAM files, gene-level quantification, differential gene expression analyses, gene set enrichment analyses, and protein pathway analyses.
 
 Tools and dependencies:
- -   [snakemake=7.21.0](https://snakemake.readthedocs.io/en/v7.21.0/) (Use v.5.2.2 in case using on a cluster)
+ -   [snakemake=7.21.0](https://snakemake.readthedocs.io/en/v7.21.0/) (Use v.5.2.2 in case running on a cluster)
  -   [snakemake-minimal=7.21.0](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html)
  -   [python=3.11.0](https://docs.python.org/3/whatsnew/3.11.html)
  -   [pandas = 0.23](https://pandas.pydata.org/)
