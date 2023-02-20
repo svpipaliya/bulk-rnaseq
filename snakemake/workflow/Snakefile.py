@@ -28,12 +28,12 @@ except FileExistsError:
 rule all: 
 	input: 
 		expand("rawQC/{fibro}_{frr}_fastqc.{extension}", fibro=fibro, frr=FRR, extension=["zip","html"]),
-		directory("../resources/star2.7_hg38_index"),
-		#directory("../resources/salmon_hg38_index"),
-		directory("../resources/star_genome"),
-		"../output/bamQC/multiqc_star_report.html",
-		"../output/featureCounts/hgid_feature_counts.txt", 
-		#expand("../output/salmonQuant/{fibro}_quant.sf", fibro=fibro)
+		directory("./resources/star2.7_hg38_index"),
+		#directory("./resources/salmon_hg38_index"),
+		directory("./resources/star_genome"),
+		"./bamQC/multiqc_star_report.html",
+		"./featureCounts/hgid_feature_counts.txt", 
+		#expand("./salmonQuant/{fibro}_quant.sf", fibro=fibro)
 		
 ##### Load RNASeq Rules #####
 include: "rules/starIndex.smk"
